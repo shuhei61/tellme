@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ジャンルランキング</title>
+</head>
+<body>
+    <h1>ジャンルランキング</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.itemName }} - {{ item.rank }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

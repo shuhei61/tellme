@@ -1,9 +1,16 @@
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>楽天市場ランキング</title>
+</head>
+<body>
+    <form action="{% url 'rankings' %}" method="post">
+        {% csrf_token %}
+        年齢:
+        <input type="text" name="age"><br>
+        性別:
+        <input type="text" name="gender"><br>
+        <input type="submit" value="ランキングを見る">
+    </form>
+</body>
 </html>

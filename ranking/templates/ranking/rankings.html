@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>楽天市場ジャンル選択</title>
+</head>
+<body>
+    <h1>ジャンルを選択してください</h1>
+    <form action="{% url 'genre_ranking' 'genre_id' %}" method="post">
+        {% csrf_token %}
+        <select name="genre_id">
+            {% for genre in genres %}
+                <option value="{{ genre }}">{{ genre }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="閲覧">
+    </form>
+</body>
+</html>
