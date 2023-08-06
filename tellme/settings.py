@@ -126,6 +126,6 @@ SESSION_COOKIE_SECURE = True
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = get_random_secret_key()
 try:
-  from .local_settings import *
+  from .settings_local import *
 except:
   pass
